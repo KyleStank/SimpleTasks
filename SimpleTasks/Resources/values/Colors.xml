@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="new_task_button">#40ADCA</color>
+    <color name="new_task_button_ripple">#0E5D72</color>
+    <color name="text_view_ripple">#606060</color>
+</resources>

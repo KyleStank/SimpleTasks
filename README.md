@@ -3,7 +3,8 @@
 # Simple Tasks
 
 ### App Description
-SimpleTasks is a basic to-do list app for Android made with Google's Material Design language. It allows users to add a task to a list, view the task, and remove the task when it is complete.
+SimpleTasks is a basic to-do list app for Android programmed in C#, and designed with Google's Material Design in mind. It allows users to add a task to a list, view the task,
+and remove the task when it is complete.
 
 
 ### Why is this useful?

@@ -3,4 +3,7 @@
     <string name="ApplicationName">Simple Tasks</string>
     <string name="TaskInputTitle">Task Name</string>
     <string name="TaskAddButton">Add Task</string>
+    <string name="NoTaskText">
+        &lt;font color=\'#ECA02F\'&gt;Tap&lt;/font&gt; the + to add a new task.
+    </string>
 </resources>
