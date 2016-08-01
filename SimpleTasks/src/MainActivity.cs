@@ -42,10 +42,8 @@ namespace SimpleTasks {
                 //Create the adapter
                 adapter = new TaskListAdapter(this, TaskList.tasks);
 
-                //Set the adapter
+                //Setup the list view
                 taskListView.Adapter = adapter;
-
-                //Set the onClick method
                 taskListView.ItemClick += TaskList_OnClick;
 
                 //Register to the context menu
