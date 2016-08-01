@@ -1,13 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Android.App;
-using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
 using Android.Widget;
 
 namespace SimpleTasks {
@@ -25,9 +17,9 @@ namespace SimpleTasks {
             SetContentView(Resource.Layout.NewTaskActivity);
 
             //Assign widgets
-            addTaskBtn = (Button)FindViewById(Resource.Id.addTaskButton);
-            taskTitleField = (EditText)FindViewById(Resource.Id.taskTitle);
-            taskField = (EditText)FindViewById(Resource.Id.taskLong);
+            taskTitleField = (EditText)FindViewById(Resource.Id.AddTask_Title);
+            taskField = (EditText)FindViewById(Resource.Id.AddTask_Text);
+            addTaskBtn = (Button)FindViewById(Resource.Id.AddTask_Button);
 
             //Assign onClicks
             //Add task button

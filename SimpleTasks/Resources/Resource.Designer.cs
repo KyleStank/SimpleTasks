@@ -45,13 +45,13 @@ namespace SimpleTasks
 		{
 			
 			// aapt resource value: 0x7f040000
-			public const int new_task_button = 2130968576;
+			public const int NewTaskButton = 2130968576;
 			
 			// aapt resource value: 0x7f040001
-			public const int new_task_button_ripple = 2130968577;
+			public const int NewTaskButtonRipple = 2130968577;
 			
 			// aapt resource value: 0x7f040002
-			public const int text_view_ripple = 2130968578;
+			public const int TextViewRipple = 2130968578;
 			
 			static Color()
 			{
@@ -67,16 +67,13 @@ namespace SimpleTasks
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int checkbox = 2130837504;
+			public const int IC_Launcher = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int ic_launcher = 2130837505;
+			public const int New_Task_Button = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int new_task_button = 2130837506;
-			
-			// aapt resource value: 0x7f020003
-			public const int text_view_ripple = 2130837507;
+			public const int Text_View_Ripple = 2130837506;
 			
 			static Drawable()
 			{
@@ -92,34 +89,34 @@ namespace SimpleTasks
 		{
 			
 			// aapt resource value: 0x7f060005
-			public const int addTaskButton = 2131099653;
-			
-			// aapt resource value: 0x7f060002
-			public const int newTaskMenuButton = 2131099650;
-			
-			// aapt resource value: 0x7f060000
-			public const int noTaskTitle = 2131099648;
-			
-			// aapt resource value: 0x7f060008
-			public const int taskCompleteCheckbox = 2131099656;
-			
-			// aapt resource value: 0x7f060001
-			public const int taskListLayout = 2131099649;
+			public const int AddTask_Button = 2131099653;
 			
 			// aapt resource value: 0x7f060004
-			public const int taskLong = 2131099652;
-			
-			// aapt resource value: 0x7f060007
-			public const int taskLongView = 2131099655;
-			
-			// aapt resource value: 0x7f060009
-			public const int taskSummaryText = 2131099657;
+			public const int AddTask_Text = 2131099652;
 			
 			// aapt resource value: 0x7f060003
-			public const int taskTitle = 2131099651;
+			public const int AddTask_Title = 2131099651;
+			
+			// aapt resource value: 0x7f060002
+			public const int NewTask_Button = 2131099650;
+			
+			// aapt resource value: 0x7f060008
+			public const int TaskFragment_Title = 2131099656;
+			
+			// aapt resource value: 0x7f060000
+			public const int TaskListEmpty_Title = 2131099648;
+			
+			// aapt resource value: 0x7f060009
+			public const int TaskList_Title = 2131099657;
+			
+			// aapt resource value: 0x7f060001
+			public const int TaskList_View = 2131099649;
+			
+			// aapt resource value: 0x7f060007
+			public const int ViewTask_Text = 2131099655;
 			
 			// aapt resource value: 0x7f060006
-			public const int taskTitleView = 2131099654;
+			public const int ViewTask_Title = 2131099654;
 			
 			static Id()
 			{
@@ -146,6 +143,9 @@ namespace SimpleTasks
 			// aapt resource value: 0x7f030003
 			public const int TaskFragment = 2130903043;
 			
+			// aapt resource value: 0x7f030004
+			public const int TaskRow = 2130903044;
+			
 			static Layout()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -170,6 +170,15 @@ namespace SimpleTasks
 			
 			// aapt resource value: 0x7f050001
 			public const int TaskInputTitle = 2131034113;
+			
+			// aapt resource value: 0x7f050006
+			public const int task_fragment_context_menu_delete = 2131034118;
+			
+			// aapt resource value: 0x7f050004
+			public const int task_fragment_context_menu_title = 2131034116;
+			
+			// aapt resource value: 0x7f050005
+			public const int task_fragment_context_menu_view = 2131034117;
 			
 			static String()
 			{

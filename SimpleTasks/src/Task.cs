@@ -1,19 +1,12 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Timers;
-using System.Threading;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Util;
 using Android.Views;
 using Android.Widget;
 using System.IO;
 using Newtonsoft.Json;
+using System;
 
 namespace SimpleTasks {
     public class TaskInfo {
@@ -32,7 +25,6 @@ namespace SimpleTasks {
         public TaskInfo info;
 
         //Widgets
-        CheckBox taskCheckbox;
         TextView taskSummary;
 
         public Task(string taskTitle, string task) { //Main construtor
@@ -49,32 +41,40 @@ namespace SimpleTasks {
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             View v = inflater.Inflate(Resource.Layout.TaskFragment, container, false);
-
+            
             //Assign widgets
-            taskCheckbox = (CheckBox)v.FindViewById(Resource.Id.taskCompleteCheckbox);
-            taskSummary = (TextView)v.FindViewById(Resource.Id.taskSummaryText);
+            taskSummary = (TextView)v.FindViewById(Resource.Id.TaskFragment_Title);
 
             //Display the task title
             taskSummary.Text = info.taskTitle;
 
             //Handle onClicks
-            //Checkbox
-            taskCheckbox.Click += delegate {
-                RemoveTask();
-            };
-
             //Task title
             taskSummary.Click += delegate {
-                //Pass information to the Task activity
-                Intent intent = new Intent(Context, typeof(TaskActivity));
-                intent.PutExtra("TaskTitle", info.taskTitle);
-                intent.PutExtra("Task", info.task);
-
-                //Start task activity
-                StartActivity(intent);
+                ViewTask();
             };
 
+            //Register this object to the context menu
+            RegisterForContextMenu(taskSummary);
+
             return v;
+        }
+
+        public override void OnCreateContextMenu(IContextMenu menu, View v, IContextMenuContextMenuInfo menuInfo) {
+            if(v.Id == Resource.Id.TaskFragment_Title) {
+                menu.SetHeaderTitle(GetString(Resource.String.task_fragment_context_menu_title));
+                menu.Add(Menu.None, 0, 0, GetString(Resource.String.task_fragment_context_menu_view));
+                menu.Add(Menu.None, 1, 1, GetString(Resource.String.task_fragment_context_menu_delete));
+            }
+        }
+
+        public override bool OnContextItemSelected(IMenuItem item) {
+            if(item.TitleFormatted.ToString() == GetString(Resource.String.task_fragment_context_menu_delete))
+                RemoveTask();
+            else if(item.TitleCondensedFormatted.ToString() == GetString(Resource.String.task_fragment_context_menu_view))
+                ViewTask();
+
+            return true;
         }
 
         void RemoveTask() { //Removes this task from the list and the layout
@@ -87,6 +87,16 @@ namespace SimpleTasks {
             trans.Commit();
 
             TaskList.SaveTaskList(Paths.taskListPath);
+        }
+
+        void ViewTask() { //Views the current task
+            //Pass information to the Task activity
+            Intent intent = new Intent(Context, typeof(TaskActivity));
+            intent.PutExtra("TaskTitle", info.taskTitle);
+            intent.PutExtra("Task", info.task);
+
+            //Start task activity
+            StartActivity(intent);
         }
     }
 

@@ -8,7 +8,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/taskTitle"
+        android:id="@+id/AddTask_Title"
         android:gravity="left"
         android:hint="Task Title"
         android:maxLines="1"
@@ -18,14 +18,14 @@
         android:inputType="textMultiLine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/taskLong"
-        android:minLines="10"
+        android:id="@+id/AddTask_Text"
+        android:minLines="5"
         android:gravity="left"
         android:hint="Something to do..."
-        android:maxLines="10" />
+        android:maxLines="5" />
     <Button
         android:text="Add Task"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/addTaskButton" />
+        android:id="@+id/AddTask_Button" />
 </LinearLayout>

@@ -6,4 +6,7 @@
     <string name="NoTaskText">
         &lt;font color=\'#ECA02F\'&gt;Tap&lt;/font&gt; the + to add a new task.
     </string>
+    <string name="task_fragment_context_menu_title">Task</string>
+    <string name="task_fragment_context_menu_view">View</string>
+    <string name="task_fragment_context_menu_delete">Delete</string>
 </resources>
