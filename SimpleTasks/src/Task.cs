@@ -27,6 +27,8 @@ namespace SimpleTasks {
         //Widgets
         TextView taskSummary;
 
+        Context context;
+
         public Task(string taskTitle, string task) { //Main construtor
             info = new TaskInfo(taskTitle, task);
         }
@@ -60,6 +62,11 @@ namespace SimpleTasks {
             return v;
         }
 
+        public override void OnAttach(Activity activity) {
+            base.OnAttach(activity);
+            context = activity.ApplicationContext;
+        }
+
         public override void OnCreateContextMenu(IContextMenu menu, View v, IContextMenuContextMenuInfo menuInfo) {
             if(v.Id == Resource.Id.TaskFragment_Title) {
                 menu.SetHeaderTitle(GetString(Resource.String.task_fragment_context_menu_title));
@@ -91,7 +98,7 @@ namespace SimpleTasks {
 
         void ViewTask() { //Views the current task
             //Pass information to the Task activity
-            Intent intent = new Intent(Context, typeof(TaskActivity));
+            Intent intent = new Intent(context, typeof(TaskActivity));
             intent.PutExtra("TaskTitle", info.taskTitle);
             intent.PutExtra("Task", info.task);
 

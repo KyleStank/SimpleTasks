@@ -1,7 +1,7 @@
 ![](http://imgur.com/QsE0vm0.png)
 
 # Simple Tasks
-
+##### Now available on the Google Play Store!
 ### App Description
 SimpleTasks is a basic to-do list app for Android programmed in C#, and designed with Google's Material Design in mind. It allows users to add a task to a list, view the task,
 and remove the task when it is complete.

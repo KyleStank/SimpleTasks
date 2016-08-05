@@ -6,7 +6,7 @@ using Android.Content;
 using Android.Views;
 
 namespace SimpleTasks {
-    [Activity(Label = "Simple Tasks", MainLauncher = true, Icon = "@drawable/ic_launcher")]
+    [Activity(Label = "SimpleTasks", MainLauncher = true, Icon = "@drawable/ic_launcher")]
     public class MainActivity : Activity {
         //Widgets
         TextView noTaskTitle;
